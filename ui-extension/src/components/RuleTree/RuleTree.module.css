@@ -1,0 +1,71 @@
+.header {
+    border-block-end: 1px solid var(--mantine-color-default-border);
+}
+
+.footer {
+    border-block-start: 1px solid var(--mantine-color-default-border);
+}
+
+.row {
+    position: relative;
+    min-height: 30px;
+    padding-inline: var(--mantine-spacing-xs);
+    border-radius: var(--mantine-radius-xs);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--mantine-color-gray-0);
+
+        .actions,
+        .grip {
+            opacity: 1;
+        }
+    }
+
+    &[data-selected] {
+        background-color: var(--mantine-color-primary-0);
+
+        .actions {
+            opacity: 1;
+        }
+    }
+
+    &[data-inactive] {
+        opacity: 0.6;
+    }
+
+    &[data-dragging] {
+        opacity: 0.4;
+    }
+
+    &[data-drop]::after {
+        content: "";
+        position: absolute;
+        inset-inline: 0;
+        height: 2px;
+        background-color: var(--mantine-color-primary-filled);
+    }
+
+    &[data-drop="before"]::after {
+        inset-block-start: -1px;
+    }
+
+    &[data-drop="after"]::after {
+        inset-block-end: -1px;
+    }
+}
+
+.grip {
+    flex-shrink: 0;
+    color: var(--mantine-color-dimmed);
+    cursor: grab;
+    opacity: 0;
+}
+
+.actions {
+    opacity: 0;
+
+    &[data-expanded] {
+        opacity: 1;
+    }
+}

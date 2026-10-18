@@ -1,0 +1,12 @@
+.figure {
+    margin: 0;
+}
+
+.image {
+    overflow: hidden;
+    background: var(--mantine-color-gray-1);
+
+    & img {
+        object-fit: cover;
+    }
+}

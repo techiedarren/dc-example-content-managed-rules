@@ -1,0 +1,13 @@
+.header {
+    border-bottom: 1px solid var(--mantine-color-gray-3);
+    background: var(--mantine-color-body);
+}
+
+.logo {
+    color: var(--mantine-color-black);
+    font-size: var(--mantine-font-size-xl);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}

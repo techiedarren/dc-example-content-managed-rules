@@ -1,0 +1,7 @@
+.root {
+    min-height: 420px;
+}
+
+.tree {
+    flex-shrink: 0;
+}

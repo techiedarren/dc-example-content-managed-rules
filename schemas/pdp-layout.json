@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/pdp-layout.json",
+    "type": "object",
+    "title": "PDP Layout",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "properties": {
+        "theme": {
+            "type": "string",
+            "ui:component": {
+                "name": "divider"
+            },
+            "title": "Theme"
+        },
+        "themeColor": {
+            "type": "string",
+            "title": "Theme Color Override",
+            "format": "color",
+            "description": "Override color used for buttons, active states etc"
+        },
+        "photoGallery": {
+            "type": "string",
+            "ui:component": {
+                "name": "divider"
+            },
+            "title": "Photo Gallery"
+        },
+        "galleryAspectRatio": {
+            "type": "string",
+            "title": "Aspect Ratio",
+            "description": "Aspect ratio of the photo gallery component",
+            "oneOf": [
+                {
+                    "const": "1:1",
+                    "title": "Square (1:1)"
+                },
+                {
+                    "const": "4:5",
+                    "title": "Portrait (4:5)"
+                },
+                {
+                    "const": "4:3",
+                    "title": "Landscape (4:3)"
+                },
+                {
+                    "const": "16:9",
+                    "title": "Wide (16:9)"
+                }
+            ]
+        }
+    },
+    "propertyOrder": [
+        "theme",
+        "themeColor",
+        "photoGallery",
+        "galleryAspectRatio"
+    ]
+}
